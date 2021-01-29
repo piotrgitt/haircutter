@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-29 14:21:28
+/* Smarty version 3.1.34-dev-7, created on 2021-01-29 21:42:27
   from 'C:\xampp\htdocs\haircutter\app\views\contact.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60140bd84d72b2_40479656',
+  'unifunc' => 'content_60147333310410_58598142',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa25d127c408307138dad5a47acb702b3274f034' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\contact.tpl',
-      1 => 1611926486,
+      1 => 1611952944,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60140bd84d72b2_40479656 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60147333310410_58598142 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_113968087960140bd84d64a5_58715486', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6503843216014733330e216_73068742', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_113968087960140bd84d64a5_58715486 extends Smarty_Internal_Block
+class Block_6503843216014733330e216_73068742 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_113968087960140bd84d64a5_58715486',
+    0 => 'Block_6503843216014733330e216_73068742',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 </header>  
         <!-- MAPA Google --> 
         <h3>My Google Maps Demo</h3>
-        <div id="map">
-            
-            
-            
-            
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.6857342749176!2d21.01920621579605!3d52.21275827975725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccde106e1f83%3A0x7b9e8241aa4b1275!2sPu%C5%82awska+1%2C+00-001+Warszawa!5e0!3m2!1spl!2spl!4v1535123729732" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
     
             
         

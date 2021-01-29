@@ -6,10 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/noscript.css" /></noscript>
-                <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhngT7ISmI0-KB0hWgso7OjcKhrtUtjhg&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhngT7ISmI0-KB0hWgso7OjcKhrtUtjhg&callback=initMap&libraries=&v=weekly"defer></script>
 
 <script src="./index.js"></script>
 <script>

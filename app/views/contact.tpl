@@ -12,12 +12,9 @@
                 </header>  
         <!-- MAPA Google --> 
         <h3>My Google Maps Demo</h3>
-        <div id="map">
             
-            
-            
-            
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.6857342749176!2d21.01920621579605!3d52.21275827975725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccde106e1f83%3A0x7b9e8241aa4b1275!2sPu%C5%82awska+1%2C+00-001+Warszawa!5e0!3m2!1spl!2spl!4v1535123729732" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
     
             
         
