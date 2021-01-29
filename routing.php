@@ -10,4 +10,6 @@ Utils::addRoute('show_front_page', 'FrontPageCtrl');
 Utils::addRoute('services', 'ServicesCtrl');
 Utils::addRoute('gallery', 'GalleryCtrl');
 Utils::addRoute('pricing', 'PricingCtrl');
+Utils::addRoute('contact', 'ContactCtrl');
+
 //Utils::addRoute('action_name', 'controller_class_name');
