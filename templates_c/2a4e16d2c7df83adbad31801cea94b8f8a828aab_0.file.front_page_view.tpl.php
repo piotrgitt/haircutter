@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-28 19:11:31
+/* Smarty version 3.1.34-dev-7, created on 2021-01-29 22:42:22
   from 'C:\xampp\htdocs\haircutter\app\views\front_page_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6012fe53478425_52974607',
+  'unifunc' => 'content_6014813e92edb7_84917745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a4e16d2c7df83adbad31801cea94b8f8a828aab' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\front_page_view.tpl',
-      1 => 1611857489,
+      1 => 1611953627,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6012fe53478425_52974607 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6014813e92edb7_84917745 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17277179156012fe534738a9_19173289', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12357090216014813e928f93_26132860', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_17277179156012fe534738a9_19173289 extends Smarty_Internal_Block
+class Block_12357090216014813e928f93_26132860 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_17277179156012fe534738a9_19173289',
+    0 => 'Block_12357090216014813e928f93_26132860',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -113,7 +113,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             strzyżenie za pomocą nożyczek lub/i maszynki, 
                             modelowanie włosów.</p>
                         <ul class="actions">
-                                <li><a href="#" class="button">Learn More</a></li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+services" class="button">Dowiedz się więcej...</a></li>
                         </ul>
                 </div>
                 <a href="#three" class="goto-next scrolly">Next</a>
@@ -133,7 +134,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             klientów, dlatego farby, których używamy są
                             delikatne i dbają o zdrowy wygląd włosów.</p>
                         <ul class="actions">
-                                <li><a href="#" class="button">Learn More</a></li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+services" class="button">Dowiedz się więcej...</a></li>
                         </ul>
                 </div>
                 <a href="#four" class="goto-next scrolly">Next</a>
@@ -149,11 +151,15 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                                 <p style="font-size: medium"> REKONSTRUKCJA WŁOSA / KERATYNA / WYGŁADZANIE </p>
                         </header>
                         <p>Specjalne zabiegi, które służą regeneracji 
-                            i pielęgnacji wszelkiego rodzaju włosów. 
+                            i pielęgnacji w
+                            
+                            `11111+1
+                            16666666szelkiego rodzaju włosów. 
                             Dla każdego problemu dobierany jest specjalny
                             produkt o dokładnie wyselekcjonowanych składnikach.</p>
                         <ul class="actions">
-                                <li><a href="#" class="button">Learn More</a></li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+services" class="button">Dowiedz się więcej...</a></li>
                         </ul>
                 </div>
                 <a href="#three" class="goto-next scrolly">Next</a>

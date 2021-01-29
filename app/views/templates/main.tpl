@@ -1,33 +1,35 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Haircutter</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/noscript.css" /></noscript>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhngT7ISmI0-KB0hWgso7OjcKhrtUtjhg&callback=initMap&libraries=&v=weekly"defer></script>
-
-<script src="./index.js"></script>
-<script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Uluru
-        const uluru = { lat: -25.344, lng: 131.036 };
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-        });
-      }
-    </script>
-
+    <head>
+        <title>Haircutter</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/noscript.css" /></noscript>
+        <!-- Google Maps Script -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhngT7ISmI0-KB0hWgso7OjcKhrtUtjhg&callback=initMap&libraries=&v=weekly"defer></script>
+        <script src="./index.js"></script>
+        <script>
+              // Initialize and add the map
+              function initMap() {
+                // The location of Uluru
+                const uluru = { lat: -25.344, lng: 131.036 };
+                // The map, centered at Uluru
+                const map = new google.maps.Map(document.getElementById("map"), {
+                  zoom: 4,
+                  center: uluru,
+                });
+                // The marker, positioned at Uluru
+                const marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map,
+                });
+              }
+        </script>  
+ 
+        
 	</head>
+        
 	<body class="is-preload landing">
 		<div id="page-wrapper">
 			<!-- Header -->
@@ -41,7 +43,7 @@
                                                         <li><a href="{$conf->action_root}pricing">Cennik</a></li>
 							<li><a href="{$conf->action_root}contact">Kontakt</a></li>
                                                         <li><a href="{$conf->action_root}services">Zaplanuj wizytę</a></li>
-							<li><a href="{$conf->action_root}services" class="button primary">Zarejestruj się</a></li>
+                                                        <li><a href="{$conf->action_root}register" class="button primary">Zarejestruj się</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -63,9 +65,18 @@
 						<li>&copy; Piotr Herdzina. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                          </div>
+
+                        </div>
 
 		</div>
-
 		<!-- Scripts -->
 			<script src="{$app_url}/../lib/assets/js/jquery.min.js"></script>
 			<script src="{$app_url}/../lib/assets/js/jquery.scrolly.min.js"></script>

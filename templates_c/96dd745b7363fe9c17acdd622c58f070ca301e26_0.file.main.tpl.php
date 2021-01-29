@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-28 19:06:28
+/* Smarty version 3.1.34-dev-7, created on 2021-01-29 23:39:04
   from 'C:\xampp\htdocs\haircutter\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6012fd24800759_32234602',
+  'unifunc' => 'content_60148e886ab7a5_55598158',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96dd745b7363fe9c17acdd622c58f070ca301e26' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\templates\\main.tpl',
-      1 => 1611854399,
+      1 => 1611956690,
       2 => 'file',
     ),
   ),
@@ -20,21 +20,50 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6012fd24800759_32234602 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60148e886ab7a5_55598158 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Haircutter</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
+    <head>
+        <title>Haircutter</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /../lib/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
+        <noscript><link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /../lib/assets/css/noscript.css" /></noscript>
+        <!-- Google Maps Script -->
+        <?php echo '<script'; ?>
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhngT7ISmI0-KB0hWgso7OjcKhrtUtjhg&callback=initMap&libraries=&v=weekly"defer><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="./index.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+>
+              // Initialize and add the map
+              function initMap() {
+                // The location of Uluru
+                const uluru = { lat: -25.344, lng: 131.036 };
+                // The map, centered at Uluru
+                const map = new google.maps.Map(document.getElementById("map"), {
+                  zoom: 4,
+                  center: uluru,
+                });
+                // The marker, positioned at Uluru
+                const marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map,
+                });
+              }
+        <?php echo '</script'; ?>
+>  
+ 
+        
 	</head>
+        
 	<body class="is-preload landing">
 		<div id="page-wrapper">
 			<!-- Header -->
@@ -46,16 +75,16 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 							<li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 show_front_page">Strona główna</a></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-uslugi">Usługi</a></li>
-                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['action_url']->value;?>
-Galeria">Galeria</a></li>
-                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['action_url']->value;?>
-Cennik">Cennik</a></li>
-							<li><a href="<?php echo $_smarty_tpl->tpl_vars['action_url']->value;?>
+services">Usługi</a></li>
+                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+gallery">Galeria</a></li>
+                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+pricing">Cennik</a></li>
+							<li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 contact">Kontakt</a></li>
-                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['action_url']->value;?>
-rezerwacja">Zaplanuj wizytę</a></li>
-							<li><a href="<?php echo $_smarty_tpl->tpl_vars['action_url']->value;?>
+                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+services">Zaplanuj wizytę</a></li>
+                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 register" class="button primary">Zarejestruj się</a></li>
 						</ul>
 					</nav>
@@ -63,7 +92,7 @@ register" class="button primary">Zarejestruj się</a></li>
                         <!-- content -->    
                                 <div class="content">
                                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3872321776012fd247fec09_82275578', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_92440702760148e886a9038_42397049', 'content');
 ?>
 
                                 </div>                                   
@@ -78,12 +107,21 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3872321776012fd247
 						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Piotr Herdzina. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                          </div>
+
+                        </div>
 
 		</div>
-
 		<!-- Scripts -->
 			<?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
@@ -121,12 +159,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3872321776012fd247
 	</body>
 </html><?php }
 /* {block 'content'} */
-class Block_3872321776012fd247fec09_82275578 extends Smarty_Internal_Block
+class Block_92440702760148e886a9038_42397049 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_3872321776012fd247fec09_82275578',
+    0 => 'Block_92440702760148e886a9038_42397049',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

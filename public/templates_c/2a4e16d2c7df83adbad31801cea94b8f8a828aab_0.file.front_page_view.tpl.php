@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-28 21:58:17
+/* Smarty version 3.1.34-dev-7, created on 2021-01-29 21:54:57
   from 'C:\xampp\htdocs\haircutter\app\views\front_page_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60132569419f05_68723387',
+  'unifunc' => 'content_60147621588cc8_68763099',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a4e16d2c7df83adbad31801cea94b8f8a828aab' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\front_page_view.tpl',
-      1 => 1611867493,
+      1 => 1611953627,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60132569419f05_68723387 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60147621588cc8_68763099 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16544945960132569413fb6_62585200', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_191094685760147621581872_93230906', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_16544945960132569413fb6_62585200 extends Smarty_Internal_Block
+class Block_191094685760147621581872_93230906 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_16544945960132569413fb6_62585200',
+    0 => 'Block_191094685760147621581872_93230906',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -151,7 +151,10 @@ services" class="button">Dowiedz się więcej...</a></li>
                                 <p style="font-size: medium"> REKONSTRUKCJA WŁOSA / KERATYNA / WYGŁADZANIE </p>
                         </header>
                         <p>Specjalne zabiegi, które służą regeneracji 
-                            i pielęgnacji wszelkiego rodzaju włosów. 
+                            i pielęgnacji w
+                            
+                            `11111+1
+                            16666666szelkiego rodzaju włosów. 
                             Dla każdego problemu dobierany jest specjalny
                             produkt o dokładnie wyselekcjonowanych składnikach.</p>
                         <ul class="actions">

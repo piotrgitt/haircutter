@@ -105,7 +105,8 @@
                         <p>Specjalne zabiegi, które służą regeneracji 
                             i pielęgnacji w
                             
-                            szelkiego rodzaju włosów. 
+                            `11111+1
+                            16666666szelkiego rodzaju włosów. 
                             Dla każdego problemu dobierany jest specjalny
                             produkt o dokładnie wyselekcjonowanych składnikach.</p>
                         <ul class="actions">
