@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-30 00:19:15
+/* Smarty version 3.1.34-dev-7, created on 2021-01-31 18:08:16
   from 'C:\xampp\htdocs\haircutter\app\views\register.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_601497f3d86ff3_59983884',
+  'unifunc' => 'content_6016e4008610d1_13540083',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9b2490a4ec8000dad061c348ef252ba74d3396bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\register.tpl',
-      1 => 1611962353,
+      1 => 1612104709,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_601497f3d86ff3_59983884 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6016e4008610d1_13540083 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2005477444601497f3d80327_62942498', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1501545796016e40085b502_06194126', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_2005477444601497f3d80327_62942498 extends Smarty_Internal_Block
+class Block_1501545796016e40085b502_06194126 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2005477444601497f3d80327_62942498',
+    0 => 'Block_1501545796016e40085b502_06194126',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -72,8 +72,7 @@ zaloguj">
                                             <ul class="actions stacked" >
                                                     <li><input type="text" name="name" id="name" value="" placeholder="Imię" /></li>
                                                     <li><input type="email" name="email" id="email" value="" placeholder="Email" /></li>
-                                                    <li><input type="text" name="tel" id="tel" value="" pattern="[0-9]<?php echo 9;?>
-" placeholder="+48" /></li>
+                                                    <li><input type="text" name="tel" id="tel" value="" placeholder="+48" /></li>
                                                     <li><input type="password" name="password" id="password" value="" placeholder="Hasło" /></li>
                                                     <li><input type="password" name="password2" id="password2" value="" placeholder="Powtórz hasło" /></li>
                                             </ul>

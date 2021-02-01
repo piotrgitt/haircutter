@@ -30,7 +30,7 @@
                                             <ul class="actions stacked" >
                                                     <li><input type="text" name="name" id="name" value="" placeholder="Imię" /></li>
                                                     <li><input type="email" name="email" id="email" value="" placeholder="Email" /></li>
-                                                    <li><input type="text" name="tel" id="tel" value="" pattern="[0-9]{9}" placeholder="+48" /></li>
+                                                    <li><input type="text" name="tel" id="tel" value="" placeholder="+48" /></li>
                                                     <li><input type="password" name="password" id="password" value="" placeholder="Hasło" /></li>
                                                     <li><input type="password" name="password2" id="password2" value="" placeholder="Powtórz hasło" /></li>
                                             </ul>
