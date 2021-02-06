@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-31 20:13:42
+/* Smarty version 3.1.34-dev-7, created on 2021-02-02 14:34:35
   from 'C:\xampp\htdocs\haircutter\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_601701665069d4_77995101',
+  'unifunc' => 'content_601954ebeca476_46671819',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96dd745b7363fe9c17acdd622c58f070ca301e26' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\templates\\main.tpl',
-      1 => 1612120420,
+      1 => 1612272872,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_601701665069d4_77995101 (Smarty_Internal_Template $_smarty_tpl) {
+function content_601954ebeca476_46671819 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -67,10 +67,16 @@ register" class="button primary">Zarejestruj się</a></li>
                         <!-- content -->    
                                 <div class="content">
                                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_197412307060170166505048_59605120', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_255663329601954ebeb4849_97124007', 'content');
 ?>
 
-                                </div>                                   
+                                </div>  
+                                
+                        <!-- Messages -->           
+                                <?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1639187605601954ebeb5a67_34184672', 'messages');
+?>
+             
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
@@ -85,9 +91,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_197412307060170166
 						<li>&copy; Piotr Herdzina. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
-                        <!-- The Modal -->
-                    
-		</div>
+
 		<!-- Scripts -->
 			<?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
@@ -121,16 +125,16 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_197412307060170166
  src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
 /../lib/assets/js/main.js"><?php echo '</script'; ?>
 >
-
+                 </div>           
 	</body>
 </html><?php }
 /* {block 'content'} */
-class Block_197412307060170166505048_59605120 extends Smarty_Internal_Block
+class Block_255663329601954ebeb4849_97124007 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_197412307060170166505048_59605120',
+    0 => 'Block_255663329601954ebeb4849_97124007',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -139,4 +143,39 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block 'content'} */
+/* {block 'messages'} */
+class Block_1639187605601954ebeb5a67_34184672 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'messages' => 
+  array (
+    0 => 'Block_1639187605601954ebeb5a67_34184672',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+
+                                <?php if ($_smarty_tpl->tpl_vars['msgs']->value->isMessage()) {?>
+                                <div class="messages bottom-margin">
+                                        <ul>
+                                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['msgs']->value->getMessages(), 'msg');
+$_smarty_tpl->tpl_vars['msg']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['msg']->value) {
+$_smarty_tpl->tpl_vars['msg']->do_else = false;
+?>
+                                        <li class="msg <?php if ($_smarty_tpl->tpl_vars['msg']->value->isError()) {?>error<?php }?> <?php if ($_smarty_tpl->tpl_vars['msg']->value->isWarning()) {?>warning<?php }?> <?php if ($_smarty_tpl->tpl_vars['msg']->value->isInfo()) {?>info<?php }?>"><?php echo $_smarty_tpl->tpl_vars['msg']->value->text;?>
+</li>
+                                        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                                        </ul>
+                                </div>
+                                <?php }?>
+
+                                <?php
+}
+}
+/* {/block 'messages'} */
 }

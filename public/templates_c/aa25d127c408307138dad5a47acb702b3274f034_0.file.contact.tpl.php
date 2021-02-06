@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-29 22:08:16
+/* Smarty version 3.1.34-dev-7, created on 2021-02-02 12:18:03
   from 'C:\xampp\htdocs\haircutter\app\views\contact.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_601479405037c3_38513246',
+  'unifunc' => 'content_601934ebb50319_05326123',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa25d127c408307138dad5a47acb702b3274f034' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\contact.tpl',
-      1 => 1611954494,
+      1 => 1612264604,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_601479405037c3_38513246 (Smarty_Internal_Template $_smarty_tpl) {
+function content_601934ebb50319_05326123 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_545525336601479405029b9_55655115', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_460391766601934ebb4ce61_10196024', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_545525336601479405029b9_55655115 extends Smarty_Internal_Block
+class Block_460391766601934ebb4ce61_10196024 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_545525336601479405029b9_55655115',
+    0 => 'Block_460391766601934ebb4ce61_10196024',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -58,7 +58,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             
         
         
-        <!-- five -->                
+        <!-- concact -->                
         <section id="four" class="wrapper style1 special fade-up">
                 <div class="container">
 

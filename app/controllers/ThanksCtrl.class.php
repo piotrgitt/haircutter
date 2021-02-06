@@ -7,15 +7,18 @@ use core\Message;
 use core\Utils;
 
 
-class FrontPageCtrl {
+class ThanksCtrl {
     
-    public function action_show_front_page() {
-		       
+    public function action_thanks() {   
+        $this->generateView();
+    }
+    
+    
+    public function generateView()
+    {
         
         App::getSmarty()->assign("action_url",App::getConf()->action_url);      
         App::getSmarty()->assign("app_url",App::getConf()->app_root);        
-        App::getSmarty()->display("front_page_view.tpl");
-        
+        App::getSmarty()->display("thanks.tpl");    
     }
-    
 }

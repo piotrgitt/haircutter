@@ -30,7 +30,24 @@
                         <!-- content -->    
                                 <div class="content">
                                         {block name=content} Domyślna treść zawartości .... {/block}
-                                </div>                                   
+                                </div>  
+                                
+                        <!-- Messages -->           
+                                {block name=messages}
+
+                                {if $msgs->isMessage()}
+                                <div class="messages bottom-margin">
+                                        <ul>
+                                        {foreach $msgs->getMessages() as $msg}
+                                        {strip}
+                                                <li class="msg {if $msg->isError()}error{/if} {if $msg->isWarning()}warning{/if} {if $msg->isInfo()}info{/if}">{$msg->text}</li>
+                                        {/strip}
+                                        {/foreach}
+                                        </ul>
+                                </div>
+                                {/if}
+
+                                {/block}             
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
@@ -45,9 +62,7 @@
 						<li>&copy; Piotr Herdzina. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
-                        <!-- The Modal -->
-                    
-		</div>
+
 		<!-- Scripts -->
 			<script src="{$app_url}/../lib/assets/js/jquery.min.js"></script>
 			<script src="{$app_url}/../lib/assets/js/jquery.scrolly.min.js"></script>
@@ -57,6 +72,6 @@
 			<script src="{$app_url}/../lib/assets/js/breakpoints.min.js"></script>
 			<script src="{$app_url}/../lib/assets/js/util.js"></script>
 			<script src="{$app_url}/../lib/assets/js/main.js"></script>
-
+                 </div>           
 	</body>
 </html>
