@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-02 14:34:35
+/* Smarty version 3.1.34-dev-7, created on 2021-02-11 17:11:14
   from 'C:\xampp\htdocs\haircutter\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_601954ebeca476_46671819',
+  'unifunc' => 'content_602557224199d7_29531077',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96dd745b7363fe9c17acdd622c58f070ca301e26' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\templates\\main.tpl',
-      1 => 1612272872,
+      1 => 1613059539,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_601954ebeca476_46671819 (Smarty_Internal_Template $_smarty_tpl) {
+function content_602557224199d7_29531077 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -36,7 +36,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 /../lib/simplepicker/dist/simplepicker.css">
         <noscript><link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /../lib/assets/css/noscript.css" /></noscript>
-
+         <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
 	</head>
         
 	<body class="is-preload landing">
@@ -60,6 +60,8 @@ contact">Kontakt</a></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 reservation">Zaplanuj wizytę</a></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+my_reservations">Moje wizyty</a></li>
+                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 register" class="button primary">Zarejestruj się</a></li>
 						</ul>
 					</nav>
@@ -67,14 +69,14 @@ register" class="button primary">Zarejestruj się</a></li>
                         <!-- content -->    
                                 <div class="content">
                                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_255663329601954ebeb4849_97124007', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_204542272460255722407b78_22405940', 'content');
 ?>
 
                                 </div>  
                                 
                         <!-- Messages -->           
                                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1639187605601954ebeb5a67_34184672', 'messages');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_123005416360255722408e85_98589604', 'messages');
 ?>
              
 			<!-- Footer -->
@@ -129,12 +131,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1639187605601954eb
 	</body>
 </html><?php }
 /* {block 'content'} */
-class Block_255663329601954ebeb4849_97124007 extends Smarty_Internal_Block
+class Block_204542272460255722407b78_22405940 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_255663329601954ebeb4849_97124007',
+    0 => 'Block_204542272460255722407b78_22405940',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -144,12 +146,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'messages'} */
-class Block_1639187605601954ebeb5a67_34184672 extends Smarty_Internal_Block
+class Block_123005416360255722408e85_98589604 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'messages' => 
   array (
-    0 => 'Block_1639187605601954ebeb5a67_34184672',
+    0 => 'Block_123005416360255722408e85_98589604',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

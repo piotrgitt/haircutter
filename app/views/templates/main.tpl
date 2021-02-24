@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/main.css" />
         <link rel="stylesheet" href="{$conf->app_url}/../lib/simplepicker/dist/simplepicker.css">
         <noscript><link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/noscript.css" /></noscript>
-
+         <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
 	</head>
         
 	<body class="is-preload landing">
@@ -23,6 +23,7 @@
                                                         <li><a href="{$conf->action_root}pricing">Cennik</a></li>
 							<li><a href="{$conf->action_root}contact">Kontakt</a></li>
                                                         <li><a href="{$conf->action_root}reservation">Zaplanuj wizytę</a></li>
+                                                        <li><a href="{$conf->action_root}my_reservations">Moje wizyty</a></li>
                                                         <li><a href="{$conf->action_root}register" class="button primary">Zarejestruj się</a></li>
 						</ul>
 					</nav>

@@ -2,7 +2,9 @@
 namespace app\Forms;
 
 class ReservationForm {
-    public $services;
-    public $marked_services;
+    public $service;
+    public $duration;
+    public $checkboxes;
     public $date_time;
+    public $reservation_description;
 }
