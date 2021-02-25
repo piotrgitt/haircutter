@@ -13,6 +13,7 @@ Utils::addRoute('pricing', 'PricingCtrl');
 Utils::addRoute('contact', 'ContactCtrl');
 Utils::addRoute('register', 'RegisterCtrl');
 Utils::addRoute('reservation', 'ReservationCtrl');
+Utils::addRoute('my_reservations', 'MyReservationsCtrl');
 Utils::addRoute('process', 'ReservationCtrl');
 Utils::addRoute('my_reservations', 'MyReservationsCtrl');
 Utils::addRoute('thanks', 'ThanksCtrl');

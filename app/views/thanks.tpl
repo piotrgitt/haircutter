@@ -16,7 +16,7 @@
             <hr>
                     <div class="col-12">
                             
-                        <li><a href="{$conf->action_root}show_front_page" class="button primary">Strona główna</a></li>        
+                        <a href="{$conf->action_root}show_front_page" class="button primary">Strona główna</a>       
                     </div>
 
                         

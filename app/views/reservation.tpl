@@ -30,13 +30,22 @@
                                            {foreach $services as $service}
                                                 {strip}
                                                         <tr>
-                                                                <td>{$service["service_name"]}</td>
-                                                                <td>{$service["service_price"]}</td>
-                                                                <td>{$service["service_time"]}</td>
-                                                                <td> <div class="col-6 col-12-medium">
-                                                                        <input type="checkbox" id="x{$service["id_service"]}" name="x{$service["id_service"]}" value="{$form->marked_services}">
-                                                                    <label for="x{$service["id_service"]}"> </label>   </div>
-                                                                </td>
+                                                            <td>{$service["service_description"]}</td>
+                                                            <td>{$service["service_price"]}</td>
+                                                            <td>{$service["service_time"]}</td>
+                                                            
+                                                            <td> 
+                                                                <div class="pretty p-default p-round p-thick">
+                                                                    <input type="radio" name="service" id="service" value="{$service["id_service"]}" />
+                                                                    
+                                                                    
+
+                                                                    <div class="state p-danger">
+                                                                        <label> </label>
+                                                                    </div>
+                                                                </div> 
+                                                            </td>
+                                                            
                                                         </tr>
                                                 {/strip}
                                                 {/foreach}    

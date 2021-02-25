@@ -7,11 +7,11 @@
 <!-- Main -->
 <div id="main" class="wrapper style1">
         <div class="container">
-            <header class="major">
-                    <h2>Rezerwacja</h2>
-            </header>  
 
-            <h3>Wybierz usługę</h3>
+         
+
+            <h3>Moje wizyty</h3>
+
             <section>
                 <form method="post" action="{$conf->action_root}process" >
                     <!-- Table -->
@@ -21,22 +21,19 @@
                                     <thead>
                                             <tr>
                                                     <th>Usługa</th>
-                                                    <th>Cena</th>
+                                                    <th>Data</th>
                                                     <th>Czas trwania</th>
-                                                    <th>Check box</th>
+
                                             </tr>
                                     </thead>
                                     <tbody>
                                            {foreach $services as $service}
                                                 {strip}
                                                         <tr>
-                                                                <td>{$service["service_name"]}</td>
-                                                                <td>{$service["service_price"]}</td>
-                                                                <td>{$service["service_time"]}</td>
-                                                                <td> <div class="col-6 col-12-medium">
-                                                                        <input type="checkbox" id="x{$service["id_service"]}" name="x{$service["id_service"]}" value="{$form->marked_services}">
-                                                                    <label for="x{$service["id_service"]}"> </label>   </div>
-                                                                </td>
+                                                            <td>{$service["service_name"]}</td>
+                                                            <td>{$service["time"]}</td>
+                                                            <td>{$service["duration"]}</td>
+            
                                                         </tr>
                                                 {/strip}
                                                 {/foreach}    
@@ -46,6 +43,7 @@
                                     
                     </div>
                                     
+
                     <label for="meeting-time">Wybierz datę i godzinę rezerwacji:</label>
 
                     <input style="color: black; width: 12em" type="datetime-local" id="date_time"
@@ -59,6 +57,9 @@
                         <input type="submit" value="rezerwuj termin" class="primary" />
                    
                     </div>
+
+                    
+
 
                 </form>
         </section>
