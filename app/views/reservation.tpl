@@ -23,14 +23,14 @@
                                                     <th>Usługa</th>
                                                     <th>Cena</th>
                                                     <th>Czas trwania</th>
-                                                    <th>Check box</th>
+                                                    <th>hello</th>
                                             </tr>
                                     </thead>
                                     <tbody>
                                            {foreach $services as $service}
                                                 {strip}
                                                         <tr>
-                                                            <td>{$service["service_description"]}</td>
+                                                            <td>{$service["service_name"]}</td>
                                                             <td>{$service["service_price"]}</td>
                                                             <td>{$service["service_time"]}</td>
                                                             
@@ -45,7 +45,6 @@
                                                                     </div>
                                                                 </div> 
                                                             </td>
-                                                            
                                                         </tr>
                                                 {/strip}
                                                 {/foreach}    

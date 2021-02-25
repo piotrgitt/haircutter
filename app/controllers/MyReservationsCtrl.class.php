@@ -8,12 +8,6 @@ use core\Utils;
 
 
 
-class ReservationCtrl {
-    
-    
-    
-    public function validate(){
-        
 
 class MyReservationsCtrl {
     
@@ -29,13 +23,14 @@ class MyReservationsCtrl {
     }
     
     public function getParams(){
-        $this->form->date_time = \core\ParamUtils::getFromRequest('date_time');
-        $this->form->marked_services = \core\ParamUtils::getFromRequest('x1');
+
        
     }
     
     public function action_my_reservations() {   
-        $this->process();
+        $this->getMyReservations();
+        
+        
         $this->generateView();
     }
     
@@ -50,17 +45,14 @@ class MyReservationsCtrl {
             
         
     }
-    
-    public function action_my_reservations() {   
-        $this->showServices();
-        $this->generateView();
-    }
-    
 
-    public function action_process() {   
+    
 
    
-    public function showServices() {  
+    
+
+   
+    public function getMyReservations() {  
 
         if($this->validate()){
             try {
@@ -68,11 +60,10 @@ class MyReservationsCtrl {
                 "id_reservation",
                 "time",
                 "id_service",
-                "id_user",
-                "duration",
-                "id_service",
                 "id_user"
-                    ]);
+                    ], [
+                "id_user" => $this->form->user_id
+        ]);
             } catch (\PDOException $e) {
                 Utils::addErrorMessage('Wystąpił błąd podczas pobierania rekordów');
                 if (App::getConf()->debug)
@@ -81,7 +72,7 @@ class MyReservationsCtrl {
         }
 
     }
-    }
+    
 
     
     public function generateView()

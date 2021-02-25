@@ -44,19 +44,9 @@
                     </div>
                                     
 
-                    <label for="meeting-time">Wybierz datę i godzinę rezerwacji:</label>
 
-                    <input style="color: black; width: 12em" type="datetime-local" id="date_time"
-                    name="date_time" value="{$form->date_time}"
-                    min="2021-02-01T00:00" max="2022-06-14T00:00">      
-                                    
-                    </fieldset>
-                      <hr>
-                    <div class="col-12">
-                            
-                        <input type="submit" value="rezerwuj termin" class="primary" />
-                   
-                    </div>
+
+                    
 
                     
 

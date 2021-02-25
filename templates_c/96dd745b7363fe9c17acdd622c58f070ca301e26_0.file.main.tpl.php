@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-25 14:22:55
+/* Smarty version 3.1.34-dev-7, created on 2021-02-25 15:50:41
   from 'C:\xampp\htdocs\haircutter\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6037a4af54e565_07911865',
+  'unifunc' => 'content_6037b941534a34_61610595',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96dd745b7363fe9c17acdd622c58f070ca301e26' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\templates\\main.tpl',
-      1 => 1612791689,
+      1 => 1614261227,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6037a4af54e565_07911865 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6037b941534a34_61610595 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -36,7 +36,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 /../lib/simplepicker/dist/simplepicker.css">
         <noscript><link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /../lib/assets/css/noscript.css" /></noscript>
-
+         <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
 	</head>
         
 	<body class="is-preload landing">
@@ -61,6 +61,7 @@ contact">Kontakt</a></li>
 reservation">Zaplanuj wizytę</a></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 my_reservations">Moje rezerwacje</a></li>
+
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 register" class="button primary">Zarejestruj się</a></li>
 						</ul>
@@ -69,14 +70,14 @@ register" class="button primary">Zarejestruj się</a></li>
                         <!-- content -->    
                                 <div class="content">
                                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18970070546037a4af51a318_87697190', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21261729226037b941523827_31439902', 'content');
 ?>
 
                                 </div>  
                                 
                         <!-- Messages -->           
                                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11951742316037a4af51bdb3_26587846', 'messages');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5983166826037b941524683_24491959', 'messages');
 ?>
              
 			<!-- Footer -->
@@ -131,12 +132,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11951742316037a4af
 	</body>
 </html><?php }
 /* {block 'content'} */
-class Block_18970070546037a4af51a318_87697190 extends Smarty_Internal_Block
+class Block_21261729226037b941523827_31439902 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_18970070546037a4af51a318_87697190',
+    0 => 'Block_21261729226037b941523827_31439902',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -146,12 +147,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'messages'} */
-class Block_11951742316037a4af51bdb3_26587846 extends Smarty_Internal_Block
+class Block_5983166826037b941524683_24491959 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'messages' => 
   array (
-    0 => 'Block_11951742316037a4af51bdb3_26587846',
+    0 => 'Block_5983166826037b941524683_24491959',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
