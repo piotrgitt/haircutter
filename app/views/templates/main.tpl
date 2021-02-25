@@ -23,6 +23,7 @@
                                                         <li><a href="{$conf->action_root}pricing">Cennik</a></li>
 							<li><a href="{$conf->action_root}contact">Kontakt</a></li>
                                                         <li><a href="{$conf->action_root}reservation">Zaplanuj wizytę</a></li>
+                                                        <li><a href="{$conf->action_root}my_reservations">Moje rezerwacje</a></li>
                                                         <li><a href="{$conf->action_root}register" class="button primary">Zarejestruj się</a></li>
 						</ul>
 					</nav>

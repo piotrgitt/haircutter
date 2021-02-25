@@ -14,7 +14,9 @@ Utils::addRoute('contact', 'ContactCtrl');
 Utils::addRoute('register', 'RegisterCtrl');
 Utils::addRoute('reservation', 'ReservationCtrl');
 Utils::addRoute('process', 'ReservationCtrl');
+Utils::addRoute('my_reservations', 'MyReservationsCtrl');
 Utils::addRoute('thanks', 'ThanksCtrl');
+
 
 
 //Utils::addRoute('action_name', 'controller_class_name');
