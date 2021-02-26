@@ -11,6 +11,7 @@ class ReservationCtrl {
     
     private $form;
     private $service;
+    private $id_user;
     
     public function __construct() {
         $this->form = new \app\Forms\ReservationForm();
@@ -24,6 +25,7 @@ class ReservationCtrl {
     public function getParams(){
         $this->form->date_time = \core\ParamUtils::getFromRequest('date_time');
         $this->form->service_id = \core\ParamUtils::getFromRequest('service');
+        $this->id_user = \core\SessionUtils::load("id_user", $keep = true);
         print($this->form->service_id);
         
         
@@ -44,11 +46,11 @@ class ReservationCtrl {
                 App::getDB()->insert("reservation", [
                             "time" => $this->form->date_time,
                             "id_service" => $this->form->service_id,
-                            "id_user" => $this->form->user
+                            "id_user" => $this->id_user
                 ]);
                 
             } catch (\PDOException $e) {
-                Utils::addErrorMessage('Wystąpił błąd podczas odczytu rekordu');
+                Utils::addErrorMessage('Wystąpił błąd podczas zapisu rekordu');
                 if (App::getConf()->debug)
                     Utils::addErrorMessage($e->getMessage());
             }
@@ -80,6 +82,7 @@ class ReservationCtrl {
     
     public function generateView()
     {
+        App::getSmarty()->assign("role",\core\SessionUtils::load("role", $keep = true));    
         App::getSmarty()->assign('form', $this->form);
         App::getSmarty()->assign('services', $this->form->services);
         App::getSmarty()->assign("action_url",App::getConf()->action_url);      

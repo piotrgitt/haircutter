@@ -12,10 +12,9 @@ Utils::addRoute('gallery', 'GalleryCtrl');
 Utils::addRoute('pricing', 'PricingCtrl');
 Utils::addRoute('contact', 'ContactCtrl');
 Utils::addRoute('register', 'RegisterCtrl');
-Utils::addRoute('reservation', 'ReservationCtrl', ["user", "admin"]);
-Utils::addRoute('my_reservations', 'MyReservationsCtrl', ["user", "admin"]);
+Utils::addRoute('reservation', 'ReservationCtrl', ["user", "root"]);
+Utils::addRoute('my_reservations', 'MyReservationsCtrl', ["user", "root"]);
 Utils::addRoute('process', 'ReservationCtrl');
-Utils::addRoute('my_reservations', 'MyReservationsCtrl');
 Utils::addRoute('thanks', 'ThanksCtrl');
 
 Utils::addRoute('login', 'LoginCtrl');

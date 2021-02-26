@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-01-29 21:54:57
+/* Smarty version 3.1.34-dev-7, created on 2021-02-26 22:34:13
   from 'C:\xampp\htdocs\haircutter\app\views\front_page_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60147621588cc8_68763099',
+  'unifunc' => 'content_60396955ab5d79_63778672',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a4e16d2c7df83adbad31801cea94b8f8a828aab' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\front_page_view.tpl',
-      1 => 1611953627,
+      1 => 1614375252,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60147621588cc8_68763099 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60396955ab5d79_63778672 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-?>
-
+if ($_smarty_tpl->tpl_vars['role']->value == "user" || $_smarty_tpl->tpl_vars['role']->value == "root") {?>
+  <?php $_smarty_tpl->_assignInScope('name', 'main_user_login.tpl');
+} else { ?>
+  <?php $_smarty_tpl->_assignInScope('name', 'main.tpl');
+}?>
+ 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_191094685760147621581872_93230906', 'content');
-$_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_183122573860396955ab1462_44468720', 'content');
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, $_smarty_tpl->tpl_vars['name']->value);
 }
 /* {block 'content'} */
-class Block_191094685760147621581872_93230906 extends Smarty_Internal_Block
+class Block_183122573860396955ab1462_44468720 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_191094685760147621581872_93230906',
+    0 => 'Block_183122573860396955ab1462_44468720',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -151,10 +155,7 @@ services" class="button">Dowiedz się więcej...</a></li>
                                 <p style="font-size: medium"> REKONSTRUKCJA WŁOSA / KERATYNA / WYGŁADZANIE </p>
                         </header>
                         <p>Specjalne zabiegi, które służą regeneracji 
-                            i pielęgnacji w
-                            
-                            `11111+1
-                            16666666szelkiego rodzaju włosów. 
+                            i pielęgnacji wszelkiego rodzaju włosów. 
                             Dla każdego problemu dobierany jest specjalny
                             produkt o dokładnie wyselekcjonowanych składnikach.</p>
                         <ul class="actions">
@@ -165,66 +166,18 @@ services" class="button">Dowiedz się więcej...</a></li>
                 <a href="#three" class="goto-next scrolly">Next</a>
         </section>
 
-<!-- five -->
-        <section id="four" class="wrapper style1 special fade-up">
-                <div class="container">
-                        <header class="major">
-                                <h2>Accumsan sed tempus adipiscing blandit</h2>
-                                <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
-                        </header>
-                        <div class="box alt">
-                                <div class="row gtr-uniform">
-                                        <section class="col-4 col-6-medium col-12-xsmall">
-                                                <span class="icon solid alt major fa-chart-area"></span>
-                                                <h3>Ipsum sed commodo</h3>
-                                                <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-                                        </section>
-                                        <section class="col-4 col-6-medium col-12-xsmall">
-                                                <span class="icon solid alt major fa-comment"></span>
-                                                <h3>Eleifend lorem ornare</h3>
-                                                <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-                                        </section>
-                                        <section class="col-4 col-6-medium col-12-xsmall">
-                                                <span class="icon solid alt major fa-flask"></span>
-                                                <h3>Cubilia cep lobortis</h3>
-                                                <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-                                        </section>
-                                        <section class="col-4 col-6-medium col-12-xsmall">
-                                                <span class="icon solid alt major fa-paper-plane"></span>
-                                                <h3>Non semper interdum</h3>
-                                                <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-                                        </section>
-                                        <section class="col-4 col-6-medium col-12-xsmall">
-                                                <span class="icon solid alt major fa-file"></span>
-                                                <h3>Odio laoreet accumsan</h3>
-                                                <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-                                        </section>
-                                        <section class="col-4 col-6-medium col-12-xsmall">
-                                                <span class="icon solid alt major fa-lock"></span>
-                                                <h3>Massa arcu accumsan</h3>
-                                                <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-                                        </section>
-                                </div>
-                        </div>
-                        <footer class="major">
-                                <ul class="actions special">
-                                        <li><a href="#" class="button">Magna sed feugiat</a></li>
-                                </ul>
-                        </footer>
-                </div>
-        </section>
 
 <!-- six -->
         <section id="five" class="wrapper style2 special fade">
                 <div class="container">
                         <header>
-                                <h2>Magna faucibus lorem diam</h2>
-                                <p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
+                                <h2>Zaplanuj swoją wizytę!</h2>
+                                <p>Online</p>
                         </header>
-                        <form method="post" action="#" class="cta">
+                        <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+reservation" class="cta">
                                 <div class="row gtr-uniform gtr-50">
-                                        <div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-                                        <div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
+                                        <div class="col-4 col-12-xsmall"><input type="submit" value="Złóż rezerwację" class="fit primary" /></div>
                                 </div>
                         </form>
                 </div>

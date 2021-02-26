@@ -16,6 +16,7 @@ class RegisterCtrl {
     
     public function generateView()
     {
+        App::getSmarty()->assign("role",\core\SessionUtils::load("role", $keep = true));    
         App::getMessages()->addMessage(new Message("Hello world message", Message::INFO));
         Utils::addInfoMessage("Or even easier message :-)");
         

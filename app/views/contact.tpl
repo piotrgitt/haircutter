@@ -1,8 +1,13 @@
-{extends file="main.tpl"}
+{if $role=="user" || $role=="root" }
+  {$name = 'main_user_login.tpl'}
+{else}
+  {$name = 'main.tpl'}
+{/if}
+ {extends $name}
+
+
 
 {block name=content}
-
-
 
 <!-- Main -->
 <div id="main" class="wrapper style1">
@@ -48,7 +53,7 @@
                         </div>
                         <footer class="major">
                                 <ul class="actions special">
-                                        <li><a href="#" class="button">Zarezerwuj wizytę on-line!</a></li>
+                                        <li><a href="{$conf->action_root}reservation" class="button">Zarezerwuj wizytę on-line!</a></li>
                                 </ul>
                         </footer>
                 </div>

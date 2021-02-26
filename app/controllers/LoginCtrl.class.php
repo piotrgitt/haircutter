@@ -1,5 +1,4 @@
 <?php
-
 namespace app\controllers;
 
 use core\App;
@@ -9,6 +8,9 @@ use core\Utils;
 
 class LoginCtrl {
     private $users;
+    private $role;
+    private $id_user;
+    
     private $form;
     
      public function __construct() {
@@ -17,36 +19,41 @@ class LoginCtrl {
     
     
     public function action_login() {  
-        $this->generateView();
+        
         if($this->validate()){
-           \core\RoleUtils::addRole($this->rola);
-            App::getRouter()->redirectTo("showFrontPage"); 
+           \core\SessionUtils::store("role", $this->role);
+           \core\SessionUtils::store("id_user", $this->id_user);
+           \core\RoleUtils::addRole($this->role);
+           App::getRouter()->redirectTo("show_front_page"); 
         }
+        $this->generateView();
     }
     
     
     
     
-    public function action_logout(){
-        
+    public function action_logout(){        
         session_destroy();
-        App::getRouter()->redirectTo("showFrontPage");
+        App::getRouter()->redirectTo("show_front_page");
         
         
     }
      public function getParams(){
         $this->form->login = \core\ParamUtils::getFromRequest('login');
         $this->form->password = \core\ParamUtils::getFromRequest('password');  
-        print($this->form->login);
+        
         
     }
     
     
     public function validate(){
         
-            $this->getParams();
+            $this->getParams();  //GETTING PARAMS FROM FORM
+            
             if(isset($this->form->login) && isset( $this->form->password)){
-                try {
+            
+                //GETTING USERS DATA FROM DATABASE
+                try { 
                     $this->users = App::getDB()->select("user", [
                         "id_user",
                         "name",
@@ -65,11 +72,14 @@ class LoginCtrl {
                 
                 
                 
-                
-                foreach($users as $user){
-                    if($user["login"]==$this->form->login && $user["password"]==$this->form->password){
-                        return true;
+                //LOOPING TROUGHT USERS
+                foreach($this->users as $user){
+                    if(($user["login"])==$this->form->login && $user["password"]==$this->form->password){
+                       $this->role = $user["role"];
+                       $this->id_user = $user["id_user"];
+                       return true;
                     }
+
                 }
                 return false; 
             }
@@ -78,7 +88,7 @@ class LoginCtrl {
     
     public function generateView()
     {
-        
+        App::getSmarty()->assign("role",\core\SessionUtils::load("role", $keep = true));    
         App::getSmarty()->assign("login",$this->form->login);
         App::getSmarty()->assign("password",$this->form->password);
 
@@ -87,3 +97,4 @@ class LoginCtrl {
         App::getSmarty()->display("login.tpl");    
     }
 }
+?>

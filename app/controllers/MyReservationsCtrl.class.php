@@ -11,7 +11,10 @@ use core\Utils;
 
 class MyReservationsCtrl {
     
-    private $form;
+    private $id_user;
+    private $reservations;
+    private $services;
+    private $role;
     
     public function __construct() {
         //stworzenie potrzebnych obiektów
@@ -23,11 +26,13 @@ class MyReservationsCtrl {
     }
     
     public function getParams(){
-
-       
+        $this->id_user = \core\SessionUtils::load("id_user", $keep = true);
+        $this->role = \core\SessionUtils::load("role", $keep = true);
+        
     }
     
     public function action_my_reservations() {   
+        $this->getParams();
         $this->getMyReservations();
         
         
@@ -35,34 +40,25 @@ class MyReservationsCtrl {
     }
     
     public function action_delete_reservation() {   
-        $this->form->durations = \core\ParamUtils::getFromRequest('checkbox2');
-        $this->form->checkboxes = \core\ParamUtils::getFromRequest('checkbox');
-        
-        
-            foreach ($this->form->checkboxes as $checkbox){ 
-            echo $checkbox."<br />";
-            }  
-            
-        
     }
-
-    
-
-   
-    
-
    
     public function getMyReservations() {  
 
         if($this->validate()){
             try {
-            $this->form->services = App::getDB()->select("reservation", [
-                "id_reservation",
-                "time",
-                "id_service",
-                "id_user"
-                    ], [
-                "id_user" => $this->form->user_id
+            $this->reservations = App::getDB()->select("reservation", 
+                [
+                    "[>]service" => "id_service"
+                ],[
+                    
+                    "reservation.id_reservation", 
+                    "reservation.time",
+                    "reservation.id_service",
+                    "reservation.id_user",
+                    "service.service_name",
+                    "service.service_time"
+                ], [
+                    "reservation.id_user" => $this->id_user
         ]);
             } catch (\PDOException $e) {
                 Utils::addErrorMessage('Wystąpił błąd podczas pobierania rekordów');
@@ -70,16 +66,21 @@ class MyReservationsCtrl {
                     Utils::addErrorMessage($e->getMessage());
             }
         }
-
+        
+        
+        
+        
+        
+        
+        
     }
     
 
     
     public function generateView()
     {
-        App::getSmarty()->assign('form', $this->form);
-        App::getSmarty()->assign('reservations', $this->form->reservations);
-        App::getSmarty()->assign('services', $this->form->services);
+        App::getSmarty()->assign("role", $this->role);
+        App::getSmarty()->assign("reservations", $this->reservations);
         App::getSmarty()->assign("action_url",App::getConf()->action_url);      
         App::getSmarty()->assign("app_url",App::getConf()->app_root);        
         App::getSmarty()->display("my_reservations.tpl");    

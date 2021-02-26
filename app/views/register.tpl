@@ -1,4 +1,10 @@
-{extends file="main.tpl"}
+{if $role=="user" || $role=="root" }
+  {$name = 'main_user_login.tpl'}
+{else}
+  {$name = 'main.tpl'}
+{/if}
+ {extends $name}
+
 
 {block name=content}
 

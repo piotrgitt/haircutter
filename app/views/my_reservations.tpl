@@ -1,4 +1,12 @@
-{extends file="main.tpl"}
+
+{if $role=="user" || $role=="root" }
+  {$name = 'main_user_login.tpl'}
+{else}
+  {$name = 'main.tpl'}
+{/if}
+ {extends $name}
+
+
 
 {block name=content}
 
@@ -13,9 +21,8 @@
             <h3>Moje wizyty</h3>
 
             <section>
-                <form method="post" action="{$conf->action_root}process" >
-                    <!-- Table -->
-                    <fieldset>
+                <form method="post" action="{$conf->action_root}delete_reservation" >
+
                     <div class="table-wrapper">
                             <table>
                                     <thead>
@@ -23,81 +30,26 @@
                                                     <th>Usługa</th>
                                                     <th>Data</th>
                                                     <th>Czas trwania</th>
-
+                                                    <th>Anuluj rezerwacje</th>
                                             </tr>
                                     </thead>
                                     <tbody>
-                                           {foreach $services as $service}
+                                           {foreach $reservations as $reservation}
                                                 {strip}
                                                         <tr>
-                                                            <td>{$service["service_name"]}</td>
-                                                            <td>{$service["time"]}</td>
-                                                            <td>{$service["duration"]}</td>
-            
+                                                            <td>{$reservation["service_name"]}</td>
+                                                            <td>{$reservation["time"]}</td>
+                                                            <td>{$reservation["service_time"]}</td>
+                                                            <td><a href="{$conf->action_root}delete_reservation" class="button primary" value="{$reservation["id_reservation"]}">Anuluj rezerwację</a></td>
                                                         </tr>
                                                 {/strip}
                                                 {/foreach}    
                                     </tbody>
-                            </table>
-                                    
-                                    
+                            </table>      
                     </div>
-                                    
-
-
-
-                    
-
-                    
-
 
                 </form>
-        </section>
-            
-        <!-- PRETTY DATE PICKER -->
-       {* <section>    
-            <button class="simplepicker-btn">Wybierz datę</button>
-            <div class="event-log">Event logs:<br></div>
-            <script src="{$conf->app_url}/../lib/simplepicker/dist/simplepicker.js"></script>
-            <script>
-                let simplepicker = new SimplePicker({
-                  zIndex: 10
-                });
-
-                        //  simplepicker.open();
-
-                const $button = document.querySelector('button');
-                const $eventLog = document.querySelector('.event-log');
-                $button.addEventListener('click', (e) => {
-                  simplepicker.open();
-                });
-
-                // $eventLog.innerHTML += '\n\n';
-                simplepicker.on('submit', (date, readableDate) => {
-                  $eventLog.innerHTML += readableDate + '\n';
-                });
-
-                simplepicker.on('close', (date) => {
-                  $eventLog.innerHTML += 'Picker Closed'  + '\n';
-                });
-            </script>
-        </section>*}
-        
-           
-         
-   
-      
-        
-        
-        
-
-
-                                        
-                                        
-                                        
-                                        
-                                        
-                        
+        </section>                                           
         </div>
 </div>
 {/block}

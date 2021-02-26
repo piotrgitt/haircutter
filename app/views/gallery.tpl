@@ -1,4 +1,10 @@
-{extends file="main.tpl"}
+{if $role=="user" || $role=="root" }
+  {$name = 'main_user_login.tpl'}
+{else}
+  {$name = 'main.tpl'}
+{/if}
+ {extends $name}
+
 
 {block name=content}
 
@@ -13,7 +19,6 @@
                 <!-- Image -->
                     <section>
                             <h3>Galeria</h3>
-                            <h4>Fit</h4>
                             <div class="box alt">
                                     <div class="row gtr-50 gtr-uniform">
                                             <div class="col-12"><span class="image fit"><img src="{$app_url}/../images/gal5.jpg" alt="" /></span></div>
