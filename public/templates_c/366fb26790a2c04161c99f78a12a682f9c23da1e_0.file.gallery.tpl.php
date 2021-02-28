@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-26 19:03:11
+/* Smarty version 3.1.34-dev-7, created on 2021-02-28 14:16:01
   from 'C:\xampp\htdocs\haircutter\app\views\gallery.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_603937df432cb9_64681824',
+  'unifunc' => 'content_603b9791346cc9_87700949',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '366fb26790a2c04161c99f78a12a682f9c23da1e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\gallery.tpl',
-      1 => 1614362589,
+      1 => 1614518133,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,31 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603937df432cb9_64681824 (Smarty_Internal_Template $_smarty_tpl) {
+function content_603b9791346cc9_87700949 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-?>
+if ($_smarty_tpl->tpl_vars['role']->value == "user") {?>
+  <?php $_smarty_tpl->_assignInScope('name', 'main_user_login.tpl');
+} elseif ($_smarty_tpl->tpl_vars['role']->value == "root") {?>
+  <?php $_smarty_tpl->_assignInScope('name', 'main_admin_login.tpl');
+} else { ?>
+   <?php $_smarty_tpl->_assignInScope('name', 'main.tpl');?> 
+<?php }?>
+ 
+
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1961861313603937df38e461_17398796', 'content');
-$_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1724413173603b97913437e5_39059560', 'content');
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, $_smarty_tpl->tpl_vars['name']->value);
 }
 /* {block 'content'} */
-class Block_1961861313603937df38e461_17398796 extends Smarty_Internal_Block
+class Block_1724413173603b97913437e5_39059560 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1961861313603937df38e461_17398796',
+    0 => 'Block_1724413173603b97913437e5_39059560',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

@@ -22,13 +22,16 @@
             <h3>Moje wizyty</h3>
 
             <section>
+                <form method="post" action="{$conf->action_root}delete_reservation" >
                     <div class="table-wrapper">
                             <table>
                                     <thead>
                                             <tr>
                                                     <th>Usługa</th>
-                                                    <th>Data</th>
+                                                    <th>Data i godzina</th>
                                                     <th>Czas trwania</th>
+                                                    <th>Imię i nazwisko</th>
+                                                    <th>Nr telefonu</th>
                                                     <th>Anuluj rezerwacje</th>
                                             </tr>
                                     </thead>
@@ -39,7 +42,9 @@
                                                             <td>{$reservation["service_name"]}</td>
                                                             <td>{$reservation["time"]}</td>
                                                             <td>{$reservation["service_time"]}</td>
-                                                            <td><a href="{$conf->action_root}delete_reservation/{$reservation["id_reservation"]}" class="button" value="{$reservation["id_reservation"]}" id="id_reservation" name="id_reservation" onclick="return confirm('Jesteś pewny, że chcesz usunąć rezerwację? ');"> Anuluj rezerwacje </a></td>
+                                                            <td>{$reservation["name"]}</td>
+                                                            <td>{$reservation["phone_number"]}</td>
+                                                            <td><button type="submit" class="primary-button" value="{$reservation["id_reservation"]}" id="reservation" name="reservation" onclick="return confirm('Jesteś pewny, że chcesz usunąć rezerwację? ');"> Anuluj rezerwację </button></td>
                                                         </tr>
                                                 {/strip}
                                                 {/foreach}    
@@ -47,6 +52,8 @@
 
                             </table>      
                     </div>
+
+                </form>
         </section>                                           
         </div>
 </div>

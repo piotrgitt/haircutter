@@ -1,9 +1,13 @@
-{if $role=="user" || $role=="root" }
+{if $role=="user" }
   {$name = 'main_user_login.tpl'}
+{else if $role=="root"}
+  {$name = 'main_admin_login.tpl'}
 {else}
-  {$name = 'main.tpl'}
+   {$name = 'main.tpl'} 
 {/if}
  {extends $name}
+
+
 
 
 {block name=content}
@@ -43,7 +47,7 @@
                                                             <td> 
                                                                 <div class="pretty p-default p-round p-thick">
                                                                     <input type="radio" name="service" id="service" value="{$service["id_service"]}" />
-                                                                    
+               
                                                                     
 
                                                                     <div class="state p-danger">

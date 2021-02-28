@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-27 18:49:22
-  from 'C:\xampp\htdocs\haircutter\app\views\templates\main.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2021-02-28 12:14:24
+  from 'C:\xampp\htdocs\haircutter\app\views\templates\main_user_login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_603a86222e6565_31488277',
+  'unifunc' => 'content_603b7b10b6e838_05881846',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '96dd745b7363fe9c17acdd622c58f070ca301e26' => 
+    'e048229b3f765c078af507fd94cbad0b413cd089' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\templates\\main.tpl',
-      1 => 1614370261,
+      0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\templates\\main_user_login.tpl',
+      1 => 1614363098,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603a86222e6565_31488277 (Smarty_Internal_Template $_smarty_tpl) {
+function content_603b7b10b6e838_05881846 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -60,25 +60,25 @@ contact">Kontakt</a></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 reservation">Zaplanuj wizytę</a></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-register" class="button primary">Zarejestruj się</a></li>
-
+my_reservations">Moje rezerwacje</a></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-login">Zaloguj się</a></li>
-
+my_profile">Mój profil</a></li>
+                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+logout">Wyloguj się</a></li>
 						</ul>
 					</nav>
 				</header>
                         <!-- content -->    
                                 <div class="content">
                                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_955027760603a8622236fb4_26346336', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1071186498603b7b10b572b1_02954703', 'content');
 ?>
 
                                 </div>  
                                 
                         <!-- Messages -->           
                                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_685798693603a8622237973_93751315', 'messages');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1658833902603b7b10b58c81_05663924', 'messages');
 ?>
              
 			<!-- Footer -->
@@ -133,12 +133,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_685798693603a86222
 	</body>
 </html><?php }
 /* {block 'content'} */
-class Block_955027760603a8622236fb4_26346336 extends Smarty_Internal_Block
+class Block_1071186498603b7b10b572b1_02954703 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_955027760603a8622236fb4_26346336',
+    0 => 'Block_1071186498603b7b10b572b1_02954703',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -148,12 +148,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'messages'} */
-class Block_685798693603a8622237973_93751315 extends Smarty_Internal_Block
+class Block_1658833902603b7b10b58c81_05663924 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'messages' => 
   array (
-    0 => 'Block_685798693603a8622237973_93751315',
+    0 => 'Block_1658833902603b7b10b58c81_05663924',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

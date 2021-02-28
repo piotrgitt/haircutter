@@ -1,7 +1,9 @@
-{if $role=="user" || $role=="root" }
+{if $role=="user" }
   {$name = 'main_user_login.tpl'}
+{else if $role=="root"}
+  {$name = 'main_admin_login.tpl'}
 {else}
-  {$name = 'main.tpl'}
+   {$name = 'main.tpl'} 
 {/if}
  {extends $name}
 

@@ -14,7 +14,10 @@ Utils::addRoute('contact', 'ContactCtrl');
 Utils::addRoute('register', 'RegisterCtrl');
 Utils::addRoute('reservation', 'ReservationCtrl', ["user", "root"]);
 Utils::addRoute('my_reservations', 'MyReservationsCtrl', ["user", "root"]);
-Utils::addRoute('process', 'ReservationCtrl');
+Utils::addRoute('all_reservations', 'AllReservationsCtrl', ["root"]);
+Utils::addRoute('delete_reservation', 'MyReservationsCtrl', ["user", "root"]);
+Utils::addRoute('delete_admin_reservation', 'AllReservationsCtrl', ["user", "root"]);
+Utils::addRoute('process', 'ReservationCtrl', ["user", "root"]);
 Utils::addRoute('thanks', 'ThanksCtrl');
 
 Utils::addRoute('login', 'LoginCtrl');
