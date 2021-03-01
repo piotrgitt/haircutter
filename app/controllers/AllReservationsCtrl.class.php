@@ -29,7 +29,7 @@ class AllReservationsCtrl {
     public function getParams(){
         $this->id_user = \core\SessionUtils::load("id_user", $keep = true);
         $this->role = \core\SessionUtils::load("role", $keep = true);
-        $this->id_reservation = \core\ParamUtils::getFromRequest('reservation');
+        $this->id_reservation = \core\ParamUtils::getFromCleanURL(1, false);
         
     }
     
@@ -40,6 +40,7 @@ class AllReservationsCtrl {
     }
     
     public function action_delete_admin_reservation() {   
+        $this->getParams();
        if($this->validate()){
            print($this->id_reservation);
             try {

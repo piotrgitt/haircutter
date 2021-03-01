@@ -44,7 +44,7 @@
                                                             <td>{$reservation["service_time"]}</td>
                                                             <td>{$reservation["name"]}</td>
                                                             <td>{$reservation["phone_number"]}</td>
-                                                            <td><button type="submit" class="primary-button" value="{$reservation["id_reservation"]}" id="reservation" name="reservation" onclick="return confirm('Jesteś pewny, że chcesz usunąć rezerwację? ');"> Anuluj rezerwację </button></td>
+                                                            <td><a href="{$conf->action_root}delete_admin_reservation/{$reservation["id_reservation"]}" class="button" value="{$reservation["id_reservation"]}" id="id_reservation" name="id_reservation" onclick="return confirm('Jesteś pewny, że chcesz usunąć rezerwację? ');"> Anuluj rezerwacje </a></td>
                                                         </tr>
                                                 {/strip}
                                                 {/foreach}    

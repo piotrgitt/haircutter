@@ -37,11 +37,12 @@ class MyReservationsCtrl {
         $this->getParams();
         $this->getMyReservations();
         $this->generateView();
+        
     }
     
     public function action_delete_reservation() {   
-
-           print($this->id_reservation);
+            $this->getParams();
+            print($this->id_reservation);
            
             try {
             $this->reservations = App::getDB()->delete("reservation", [

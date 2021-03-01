@@ -69,9 +69,7 @@ class LoginCtrl {
                         if (App::getConf()->debug)
                             Utils::addErrorMessage($e->getMessage());
                 }
-                
-                
-                
+
                 //LOOPING TROUGHT USERS
                 foreach($this->users as $user){
                     if(($user["login"])==$this->form->login && $user["password"]==$this->form->password){

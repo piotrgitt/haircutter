@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-28 13:58:06
+/* Smarty version 3.1.34-dev-7, created on 2021-03-01 16:10:03
   from 'C:\xampp\htdocs\haircutter\app\views\front_page_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_603b935ecf1284_74747153',
+  'unifunc' => 'content_603d03cb617385_01510501',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a4e16d2c7df83adbad31801cea94b8f8a828aab' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\front_page_view.tpl',
-      1 => 1614517085,
+      1 => 1614611402,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603b935ecf1284_74747153 (Smarty_Internal_Template $_smarty_tpl) {
+function content_603d03cb617385_01510501 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 if ($_smarty_tpl->tpl_vars['role']->value == "user") {?>
@@ -34,16 +34,16 @@ if ($_smarty_tpl->tpl_vars['role']->value == "user") {?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1479966514603b935ececff8_45988480', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1682608991603d03cb612936_58860044', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, $_smarty_tpl->tpl_vars['name']->value);
 }
 /* {block 'content'} */
-class Block_1479966514603b935ececff8_45988480 extends Smarty_Internal_Block
+class Block_1682608991603d03cb612936_58860044 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1479966514603b935ececff8_45988480',
+    0 => 'Block_1682608991603d03cb612936_58860044',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -175,7 +175,6 @@ services" class="button">Dowiedz się więcej...</a></li>
                 <div class="container">
                         <header>
                                 <h2>Zaplanuj swoją wizytę!</h2>
-                                <p>Online</p>
                         </header>
                         <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 reservation" class="cta">

@@ -127,7 +127,6 @@
                 <div class="container">
                         <header>
                                 <h2>Zaplanuj swoją wizytę!</h2>
-                                <p>Online</p>
                         </header>
                         <form method="post" action="{$conf->action_root}reservation" class="cta">
                                 <div class="row gtr-uniform gtr-50">

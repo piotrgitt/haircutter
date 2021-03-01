@@ -1,11 +1,11 @@
 {if $role=="user" }
-  {$name = 'main_user_login.tpl'}
+  {$template = 'main_user_login.tpl'}
 {else if $role=="root"}
-  {$name = 'main_admin_login.tpl'}
+  {$template = 'main_admin_login.tpl'}
 {else}
-   {$name = 'main.tpl'} 
+   {$template = 'main.tpl'} 
 {/if}
- {extends $name}
+ {extends $template}
 
 
 
@@ -28,7 +28,7 @@
         
         
         <section>
-                <form method="post" action="{$conf->action_root}zaloguj">
+                <form method="post" action="{$conf->action_root}register">
                         <div class="row gtr-uniform gtr-50">
 
                                 
@@ -37,11 +37,12 @@
                                         <header>
                                             <div style="max-width: 35%;margin-left: 32.5%">
                                             <ul class="actions stacked" >
-                                                    <li><input type="text" name="name" id="name" value="" placeholder="Imię" /></li>
-                                                    <li><input type="email" name="email" id="email" value="" placeholder="Email" /></li>
-                                                    <li><input type="text" name="tel" id="tel" value="" placeholder="+48" /></li>
-                                                    <li><input type="password" name="password" id="password" value="" placeholder="Hasło" /></li>
-                                                    <li><input type="password" name="password2" id="password2" value="" placeholder="Powtórz hasło" /></li>
+                                                    <li><input type="text" name="login" id="login" value="{$login}" placeholder="Login" /></li>
+                                                    <li><input type="text" name="name" id="name" value="{$name}" placeholder="Imię" /></li>
+                                                    <li><input type="email" name="e_mail" id="e_mail" value="{$e_mail}" placeholder="Email" /></li>
+                                                    <li><input type="text" name="phone_number" id="phone_number" value="{$phone_number}" placeholder="+48" /></li>
+                                                    <li><input type="password" name="password" id="password" value="{$password}" placeholder="Hasło" /></li>
+                                                    <li><input type="password" name="password_confirmation" id="password_confirmation" value="{$password_confirmation}" placeholder="Powtórz hasło" /></li>
                                             </ul>
                                             </div>
                                         </header>

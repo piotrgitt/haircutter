@@ -17,8 +17,6 @@ class ContactCtrl {
     
     public function generateView()
     {
-        App::getMessages()->addMessage(new Message("Hello world message", Message::INFO));
-        Utils::addInfoMessage("Or even easier message :-)");
         
         App::getSmarty()->assign("role",\core\SessionUtils::load("role", $keep = true));    
         App::getSmarty()->assign("action_url",App::getConf()->action_url);      

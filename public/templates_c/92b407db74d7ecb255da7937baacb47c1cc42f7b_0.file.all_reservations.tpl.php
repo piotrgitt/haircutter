@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-28 14:16:15
+/* Smarty version 3.1.34-dev-7, created on 2021-03-01 16:07:38
   from 'C:\xampp\htdocs\haircutter\app\views\all_reservations.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_603b979fcc9f42_94984969',
+  'unifunc' => 'content_603d033a0508f0_33787428',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '92b407db74d7ecb255da7937baacb47c1cc42f7b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\all_reservations.tpl',
-      1 => 1614518127,
+      1 => 1614611251,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603b979fcc9f42_94984969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_603d033a0508f0_33787428 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 if ($_smarty_tpl->tpl_vars['role']->value == "user") {?>
@@ -35,16 +35,16 @@ if ($_smarty_tpl->tpl_vars['role']->value == "user") {?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_820159304603b979fcbf736_82405069', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1663342829603d033a044c63_37052464', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, $_smarty_tpl->tpl_vars['name']->value);
 }
 /* {block 'content'} */
-class Block_820159304603b979fcbf736_82405069 extends Smarty_Internal_Block
+class Block_1663342829603d033a044c63_37052464 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_820159304603b979fcbf736_82405069',
+    0 => 'Block_1663342829603d033a044c63_37052464',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -71,7 +71,7 @@ delete_reservation" >
                                                     <th>Usługa</th>
                                                     <th>Data i godzina</th>
                                                     <th>Czas trwania</th>
-                                                    <th>Imię i nazwisko</th>]
+                                                    <th>Imię i nazwisko</th>
                                                     <th>Nr telefonu</th>
                                                     <th>Anuluj rezerwacje</th>
                                             </tr>
@@ -88,8 +88,10 @@ $_smarty_tpl->tpl_vars['reservation']->do_else = false;
 </td><td><?php echo $_smarty_tpl->tpl_vars['reservation']->value["service_time"];?>
 </td><td><?php echo $_smarty_tpl->tpl_vars['reservation']->value["name"];?>
 </td><td><?php echo $_smarty_tpl->tpl_vars['reservation']->value["phone_number"];?>
-</td><td><button type="submit" class="button" value="<?php echo $_smarty_tpl->tpl_vars['reservation']->value["id_reservation"];?>
-" id="reservation" name="reservation" onclick="return confirm('Jesteś pewny, że chcesz usunąć rezerwację? ');"> Anuluj rezerwację </button></td></tr>
+</td><td><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+delete_admin_reservation/<?php echo $_smarty_tpl->tpl_vars['reservation']->value["id_reservation"];?>
+" class="button" value="<?php echo $_smarty_tpl->tpl_vars['reservation']->value["id_reservation"];?>
+" id="id_reservation" name="id_reservation" onclick="return confirm('Jesteś pewny, że chcesz usunąć rezerwację? ');"> Anuluj rezerwacje </a></td></tr>
                                                 <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>    
