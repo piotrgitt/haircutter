@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-02-27 18:49:21
+/* Smarty version 3.1.34-dev-7, created on 2021-10-06 18:21:07
   from 'C:\xampp\htdocs\haircutter\app\views\front_page_view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_603a8621ee6994_58137311',
+  'unifunc' => 'content_615dccf3f2be29_89202991',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a4e16d2c7df83adbad31801cea94b8f8a828aab' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\front_page_view.tpl',
-      1 => 1614375252,
+      1 => 1633535355,
       2 => 'file',
     ),
   ),
@@ -20,34 +20,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603a8621ee6994_58137311 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615dccf3f2be29_89202991 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-if ($_smarty_tpl->tpl_vars['role']->value == "user" || $_smarty_tpl->tpl_vars['role']->value == "root") {?>
+if ($_smarty_tpl->tpl_vars['role']->value == "user") {?>
   <?php $_smarty_tpl->_assignInScope('name', 'main_user_login.tpl');
+} elseif ($_smarty_tpl->tpl_vars['role']->value == "root") {?>
+  <?php $_smarty_tpl->_assignInScope('name', 'main_admin_login.tpl');
 } else { ?>
-  <?php $_smarty_tpl->_assignInScope('name', 'main.tpl');
-}?>
+  <?php $_smarty_tpl->_assignInScope('name', 'main.tpl');?> 
+<?php }?>
  
 
+
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2138366548603a8621e88fe8_71254569', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_383897132615dccf3f24730_48566325', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, $_smarty_tpl->tpl_vars['name']->value);
 }
 /* {block 'content'} */
-class Block_2138366548603a8621e88fe8_71254569 extends Smarty_Internal_Block
+class Block_383897132615dccf3f24730_48566325 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2138366548603a8621e88fe8_71254569',
+    0 => 'Block_383897132615dccf3f24730_48566325',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-
-<!-- Banner -->
+    
+    <!-- Banner -->
         <section id="banner">
             
                 <div class="content">
@@ -172,7 +175,6 @@ services" class="button">Dowiedz się więcej...</a></li>
                 <div class="container">
                         <header>
                                 <h2>Zaplanuj swoją wizytę!</h2>
-                                <p>Online</p>
                         </header>
                         <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 reservation" class="cta">

@@ -19,8 +19,16 @@
 
          
 
-            <h3>Moje wizyty</h3>
-
+            <h3>Wizyty w salonie</h3>
+            <form class="" action="{$conf->action_url}all_reservations">
+                <section>
+                    <fieldset>
+                        <input type="text" placeholder="nazwisko" name="sf_surname" value="{$searchForm->surname}" /><br />
+                        <button type="submit" class="button">Filtruj</button>
+                    </fieldset>
+                </section>
+            </form>
+                    <hr>        
             <section>
                 <form method="post" action="{$conf->action_root}delete_reservation" >
                     <div class="table-wrapper">

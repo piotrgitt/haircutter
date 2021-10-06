@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-03-01 16:07:38
+/* Smarty version 3.1.34-dev-7, created on 2021-10-06 18:50:23
   from 'C:\xampp\htdocs\haircutter\app\views\all_reservations.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_603d033a0508f0_33787428',
+  'unifunc' => 'content_615dd3cf2ea3c8_99044517',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '92b407db74d7ecb255da7937baacb47c1cc42f7b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\haircutter\\app\\views\\all_reservations.tpl',
-      1 => 1614611251,
+      1 => 1633538835,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_603d033a0508f0_33787428 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615dd3cf2ea3c8_99044517 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 if ($_smarty_tpl->tpl_vars['role']->value == "user") {?>
@@ -35,16 +35,16 @@ if ($_smarty_tpl->tpl_vars['role']->value == "user") {?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1663342829603d033a044c63_37052464', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1305756477615dd3cf2dcc00_70307365', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, $_smarty_tpl->tpl_vars['name']->value);
 }
 /* {block 'content'} */
-class Block_1663342829603d033a044c63_37052464 extends Smarty_Internal_Block
+class Block_1305756477615dd3cf2dcc00_70307365 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1663342829603d033a044c63_37052464',
+    0 => 'Block_1305756477615dd3cf2dcc00_70307365',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -59,8 +59,18 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
          
 
-            <h3>Moje wizyty</h3>
-
+            <h3>Wizyty w salonie</h3>
+            <form class="" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+all_reservations">
+                <section>
+                    <fieldset>
+                        <input type="text" placeholder="nazwisko" name="sf_surname" value="<?php echo $_smarty_tpl->tpl_vars['searchForm']->value->surname;?>
+" /><br />
+                        <button type="submit" class="button">Filtruj</button>
+                    </fieldset>
+                </section>
+            </form>
+                    <hr>        
             <section>
                 <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 delete_reservation" >
