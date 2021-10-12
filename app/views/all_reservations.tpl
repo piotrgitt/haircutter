@@ -16,15 +16,15 @@
 <!-- Main -->
 <div id="main" class="wrapper style1">
         <div class="container">
-
+            
+            
             <h3>Wizyty w salonie</h3>
             <div class="bottom-margin">
-<form id="search-form" class="pure-form pure-form-stacked" onsubmit="ajaxPostForm('search-form','{$conf->action_root}all_reservations_table','table'); return false;">
-	<legend>Opcje wyszukiwania</legend>
-	<fieldset>
+            <form id="search-form" class="" onsubmit="ajaxPostForm('search-form','{$conf->action_root}all_reservations_table','table'); return false;">
+            <fieldset>
 		<input type="text" placeholder="nazwisko" name="sf_surname" value="{$searchForm->surname}" /><br />
-		<button type="submit" class="pure-button pure-button-primary">Filtruj</button>
-	</fieldset>
+		<button type="submit" class="button">Filtruj</button>
+            </fieldset>
 </form>
 </div>	
 
