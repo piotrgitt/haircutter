@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/haircutter/init.php</file>
             <file>file:/C:/xampp/htdocs/haircutter/app/views/all_reservations.tpl</file>
             <file>file:/C:/xampp/htdocs/haircutter/routing.php</file>
+            <file>file:/C:/xampp/htdocs/haircutter/app/views/templates/main.tpl</file>
             <file>file:/C:/xampp/htdocs/haircutter/app/controllers/AllReservationsCtrl.class.php</file>
+            <file>file:/C:/xampp/htdocs/haircutter/public/js/functions.js</file>
         </group>
     </open-files>
 </project-private>

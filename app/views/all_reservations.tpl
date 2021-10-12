@@ -17,19 +17,22 @@
 <div id="main" class="wrapper style1">
         <div class="container">
 
-         
-
             <h3>Wizyty w salonie</h3>
-            <form class="" action="{$conf->action_url}all_reservations">
-                <section>
-                    <fieldset>
-                        <input type="text" placeholder="nazwisko" name="sf_surname" value="{$searchForm->surname}" /><br />
-                        <button type="submit" class="button">Filtruj</button>
-                    </fieldset>
-                </section>
-            </form>
-                    <hr>        
-            <section>
+            <div class="bottom-margin">
+<form id="search-form" class="pure-form pure-form-stacked" onsubmit="ajaxPostForm('search-form','{$conf->action_root}all_reservations_table','table'); return false;">
+	<legend>Opcje wyszukiwania</legend>
+	<fieldset>
+		<input type="text" placeholder="nazwisko" name="sf_surname" value="{$searchForm->surname}" /><br />
+		<button type="submit" class="pure-button pure-button-primary">Filtruj</button>
+	</fieldset>
+</form>
+</div>	
+
+                        
+            <div id="table">
+                {include file="all_reservations_table.tpl"}
+            </div>
+            {*<section>
                 <form method="post" action="{$conf->action_root}delete_reservation" >
                     <div class="table-wrapper">
                             <table>
@@ -62,7 +65,7 @@
                     </div>
 
                 </form>
-        </section>                                           
+        </section>*}                                           
         </div>
 </div>
 {/block}
