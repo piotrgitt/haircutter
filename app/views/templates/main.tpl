@@ -4,10 +4,10 @@
         <title>Haircutter</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-{*        <link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/main.css" />
-        <link rel="stylesheet" href="{$conf->app_url}/../lib/simplepicker/dist/simplepicker.css">*}
-{*        <noscript><link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/noscript.css" /></noscript>
-*}        <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
+       <link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/main.css" />
+        <link rel="stylesheet" href="{$conf->app_url}/../lib/simplepicker/dist/simplepicker.css">
+       <noscript><link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/noscript.css" /></noscript>
+     <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
         <script type="text/javascript" src="{$conf->app_url}/js/functions.js"></script>
 	</head>
         
