@@ -5,6 +5,10 @@
         <group>
             <file>file:/C:/xampp/htdocs/haircutter/app/views/all_reservations.tpl</file>
             <file>file:/C:/xampp/htdocs/haircutter/app/controllers/AllReservationsCtrl.class.php</file>
+            <file>file:/C:/xampp/htdocs/haircutter/app/views/templates/main_admin_login.tpl</file>
+            <file>file:/C:/xampp/htdocs/haircutter/app/views/templates/main.tpl</file>
+            <file>file:/C:/xampp/htdocs/haircutter/app/views/templates/main_user_login.tpl</file>
+
         </group>
     </open-files>
 </project-private>

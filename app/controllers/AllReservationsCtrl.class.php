@@ -44,6 +44,18 @@ class AllReservationsCtrl {
         $this->generateView();
     }
     
+    public function action_all_reservations_table() {   
+        $this->getParams();
+        $this->getMyReservations();
+        App::getSmarty()->assign("role", $this->role);
+        App::getSmarty()->assign("searchForm", $this->form);
+        App::getSmarty()->assign("reservations", $this->reservations);
+        App::getSmarty()->assign("action_url",App::getConf()->action_url);      
+        App::getSmarty()->assign("app_url",App::getConf()->app_root);        
+        App::getSmarty()->display("all_reservations_table.tpl");   
+    }
+    
+    
     public function action_delete_admin_reservation() {   
         $this->getParams();
        if($this->validate()){

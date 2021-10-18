@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{$conf->app_url}/../lib/simplepicker/dist/simplepicker.css">
         <noscript><link rel="stylesheet" href="{$conf->app_url}/../lib/assets/css/noscript.css" /></noscript>
          <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
+         <script type="text/javascript" src="{$conf->app_url}/js/functions.js"></script>
 	</head>
         
 	<body class="is-preload landing">
