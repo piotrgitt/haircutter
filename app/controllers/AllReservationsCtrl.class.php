@@ -87,7 +87,8 @@ class AllReservationsCtrl {
             $where = &$search_params;
         }
         $where = &$search_params;
-         $where ["ORDER"] = "name";   
+        $where ["ORDER"] = "name";   
+        $where ["LIMIT"] = 100;
 
          
         if($this->validate()){
